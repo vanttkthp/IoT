@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MQTT Publisher</title>
+</head>
+<body>
+    <h1>MQTT Publisher</h1>
+    <input type="text" id="mqttMessage" placeholder="Nhập giá trị chuỗi">
+    <button onclick="sendMessage()">Gửi</button>
+
+    <script>
+        function sendMessage() {
+            var message = document.getElementById("mqttMessage").value;
+            // Sử dụng JavaScript AJAX hoặc Fetch để gửi giá trị lên MQTT Broker ở đây
+            // Ví dụ sử dụng Fetch:
+            fetch('/publish', {
+                method: 'POST',
+                body: JSON.stringify({ message: message }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error('Lỗi:', error));
+        }
+    </script>
+</body>
+</html>
