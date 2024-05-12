@@ -1,0 +1,23 @@
+{
+  "name": "iot-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app.js"
+  },
+  "keywords": [],
+  "author": "Dao Cong Van",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "mqtt": "^5.1.4",
+    "mysql": "^2.18.1",
+    "nodemon": "^3.0.1",
+    "socket.io": "^4.7.2",
+    "sse-express": "^1.0.2",
+    "uuid": "^9.0.1",
+    "ws": "^8.14.2"
+  }
+}
